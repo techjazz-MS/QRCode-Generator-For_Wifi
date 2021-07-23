@@ -8,6 +8,10 @@ languages:
 
 ![](public/assets/Screenshot.PNG)
 
+
+[Demo](https://qr-code-generator-for-wifi.web.app/)
+
+
 ## Scenario
 
 This is a sample QR-Code Generator for home Wifi Networks. Use this sample to generate a QR-Code for your Home wifi and ask your guests to just scan the QR-Code with their phone camera or a suitable QR-Scanner on their mobile phones and get connected to the wifi seamlesslessly.
