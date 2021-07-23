@@ -10,10 +10,8 @@ function generateQRCode(){
     let qrText = "WIFI:S:" + ssid + ";T:" + encryption + ";P:" + password + ";H:" + hidden + ";;";
     console.log(qrText);
     qrcode.makeCode(qrText);
-
+    
 }
-
-
 
 
 
