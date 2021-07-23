@@ -1,0 +1,24 @@
+{
+  "name": "qrcodegeneratorforwifi_nodejs",
+  "version": "1.0.0",
+  "description": "QR Code Generator for protecting your WIFI Password.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "start-dev": "nodemon app"
+  },
+  "author": "Sourav Mishra",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "qrcode": "^1.4.4"
+  }
+}

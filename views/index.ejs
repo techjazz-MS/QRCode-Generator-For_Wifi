@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRCodeGeneratorForWifi</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon.ico"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"> <!-- load fontawesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+    <span id="forkongithub"><a href="https://github.com/techjazz-MS/QRCode_Generator_for_WIFI.git">Fork me on GitHub</a></span>
+    <nav class="navbar navbar-expand-lg navbar-custom" style="background-color: #000000;">
+        <a class="navbar-brand navbar-text" href="/"><img id="logo" src="/assets/WifiLogo.gif"> QR Code Generator</a>
+        <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="line"></span> 
+            <span class="line"></span> 
+            <span class="line" style="margin-bottom: 0;"></span>
+        </button>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4"><i class="fas fa-wifi"></i> QR Code Wifi Login</h1>
+            <p class="lead">Scan the QR Code with QR-Code scanner in your wifi setiing or from your phone camera or QR Code scanner app.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="" id="form">
+            <div class="form-group">
+                <label for="ssid">SSID</label>
+                <input type="text" class="form-control" id="ssid">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <div class="form-group">
+                <label for="enc" class="control-label">Encryption</label>
+                <select name="enc" id="enc" class="form-control">
+                    <option value="WPA">WPA/WPA2</option>
+                    <option value="WEP">WEP</option>
+                    <option value="nopass">None</option>
+                </select>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="hidden">
+                <label class="form-check-label" for="hidden">Hidden ?</label>
+            </div>
+
+            <button class="btn btn-success" id="getQRCode" onclick="generateQRCode(this)"><i class="fas fa-qrcode"></i> Generate QR-Code</button>
+            <button class="btn btn-primary" id="print" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+        </form>
+    </div>
+
+    <div id="qrcode" style="text-align: center;">    
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">QR-Code Generator for Wifi Password - by SouravMishra</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCode-Generator/master/qrcode.js"></script>
+    <script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCode-Generator/master/html5-qrcode.js"></script>
+
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/qrCode.js"></script>
+</body>
+</html>
